@@ -2,6 +2,15 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="UTF")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    link(rel='stylesheet', href='stylesheets/style.css')
+    script(src="//code.jquery.com/jquery-1.11.2.min.js")  
   body
+    nav
+      .toggle-menu Menu
+      ul.menu
+        each item in ['Inicio','Quienes somos','Misión','Visión','Acerca de nosotros','Contacto']
+          li: a(href="#")= item
+    script(src="script/jquery.js")
     block content

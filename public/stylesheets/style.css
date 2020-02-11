@@ -1,3 +1,4 @@
+/*
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +6,61 @@ body {
 
 a {
   color: #00B7FF;
+}
+*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-menu {
+  text-align: center;
+  line-height: 2.5;
+  background: blue;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+  background: rgb(63, 63, 122);
+
+}
+
+.menu li {
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 3;
+  display: block;
+}
+
+.menu a:hover {
+  background: rgb(1, 1, 3);
+}
+
+@media handheld and (min-width: 600px), screen and (min-width: 600px) {
+  .toggle-menu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li {
+    flex: auto;
+    border-right: grey;
+  }
+  .menu li:last-child {
+    border-right: none;
+  }
 }
